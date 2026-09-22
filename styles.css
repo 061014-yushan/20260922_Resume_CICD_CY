@@ -66,13 +66,37 @@ h1 span { font-size: 32px; font-weight: 400; letter-spacing: 0; color: var(--sub
 .hero-role { margin-bottom: 12px; font-size: 20px; }
 .hero-school { color: var(--muted); font-size: 18px; }
 .hero-visual { flex-shrink: 0; }
-.hero-visual figure { padding: 9px; border: 1px solid #d8ceb9; background: #fffefa; box-shadow: 0 12px 32px #3444390b; }
-.hero-visual img { display: block; width: 220px; height: 220px; object-fit: cover; }
+.hero-visual figure {
+  padding:9px;
+  border:1px solid #d8ceb9;
+  background:#fffefa;
+  box-shadow:0 12px 32px #3444390b;
+}
+.hero-visual img {
+  display:block;
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:50%;
+}
 .research-direction { margin-top: 30px; }
 .research-direction > span { font-size: 20px; font-weight: 600; color: var(--subheading); }
 .research-direction p { margin-top: 8px; font-size: var(--body-size); }
 .research-direction strong { font-weight: 600; color: var(--heading); }
-.profile-details { display: grid; grid-template-columns: 1fr 1.15fr 1.1fr 1.4fr; gap: 28px; margin-top: 22px; }
+..profile-details {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1.1fr 1.4fr;
+  gap: 28px;
+  margin-top: 22px;
+}
+
+.profile-details > div {
+  padding: 16px 18px;
+  border: 1px solid #d8ceb9;
+  border-radius: 14px;
+  background: #fffefa;
+  box-shadow: 0 6px 18px #34443908;
+}
 .profile-details > div > span { color: var(--subheading); font-size: 15px; }
 .profile-details p { margin-top: 7px; font-size: 16px; }
 .profile-details a { overflow-wrap: anywhere; }
@@ -146,7 +170,20 @@ footer { border-top: 1px solid var(--line); padding: 25px 0; }
   .work-copy h3 { font-size: 20px; }
 }
 @media (max-width: 640px) {
-  :root { --body-size: 18px; --title-size: 27px; }
+  :root {
+  /* 配色层级：墨绿主标题、古铜次标题、深灰正文、香槟色细线。 */
+  --text: #363b38;
+  --muted: #707873;
+  --accent: #487066;
+  --heading: #2c584b;
+  --subheading: #8c7257;
+  --gold: #c4aa85;
+  --heading-wash: #eef4f0;
+  --body-size: 19px;
+  --title-size: 32px;
+  --line: #e5e0d7;
+  --background: #f9f7f2;
+}
   html { scroll-padding-top: 110px; }
   .container { width: calc(100% - 40px); }
   .header-inner { display: block; min-height: 90px; padding: 10px 0; }
